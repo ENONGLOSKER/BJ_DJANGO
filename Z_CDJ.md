@@ -114,6 +114,14 @@ categor : dari field yang ditangkap
 app_name = 'blog'
 
 ## --------------------------------------------------
+
+- git remote
+git remote add origin link repo
+git remote add origin https://github.com/ENONGLOSKER/DJANGO.git
+
+- ganti remote git
+git remote set-url origin link repo
+git remote set-url origin https://github.com/ENONGLOSKER/DJANGO.git
 ## --------------------------------------------------
 home
 form registert 
