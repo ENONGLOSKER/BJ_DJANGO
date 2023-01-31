@@ -1,0 +1,33 @@
+{%extends "base.html"%}
+
+{%block title%}
+    {{judul}}
+{%endblock title%}
+
+{%block pagetitle%}
+    <h1>{{judul}}</h1>
+{%endblock pagetitle%}
+
+{%block breadcrumb%}
+<li class="breadcrumb-item "  aria-current="page">Home</li>
+<li class="breadcrumb-item ">Blog</li>
+<li class="breadcrumb-item ">Detail</li>
+<li class="breadcrumb-item active">Categori {{datas.categori}}</li>
+{%endblock breadcrumb%}
+
+{%block content%}
+   <p><i>{{salam}}</i> </p>
+    Kategori :
+    {%for datacategori in categoris%}
+    <span class="badge bg-secondary" >
+        <a href="{%url 'blog:categori' categori_url=datacategori.categori%}" style="text-decoration: none;  color: whitesmoke;">{{datacategori.categori}}</a>
+    </span>
+    {%endfor%}
+
+   {%for data in datas%}
+    <a href="{%url 'blog:detail' slug_url=data.slug%}"><h3>{{data.judul}}</h3></a>
+   <h6>{{data.publish}}</h6>
+   {%endfor%}
+ 
+
+{%endblock content%}

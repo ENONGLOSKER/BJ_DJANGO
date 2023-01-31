@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+{%block judul%}
+    {{judul}}
+{%endblock judul%}
+
+{%block kontent%}
+    <h2>{{judul}}</h2>
+    <h5 class="bg-danger">{{error}}</h5>
+    <form action="" method="post">
+        {%csrf_token%}
+        <table>
+            {{posts.as_table}}
+        </table>
+        <button type="submit">Kirim</button>
+    </form>
+
+{%endblock kontent%}

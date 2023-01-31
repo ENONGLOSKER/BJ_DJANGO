@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+
+{%block title%}
+    {{judul}}
+{%endblock title%}
+
+{%block pagetitle%}
+    <h1>{{judul}}</h1>
+{%endblock pagetitle%}
+
+Kategori :
+{%for datacategori in categoris%}
+<span class="badge bg-secondary" >
+    <a href="/blog/categori/{{datacategori.categori}}" style="text-decoration: none;  color: whitesmoke;">{{datacategori.categori}}</a>
+</span>
+{%endfor%}
+
+{%block content%}
+    <p> {{salam}}</p>
+{%endblock content%}
+
+{%block breadcrumb%}
+<li class="breadcrumb-item active"  aria-current="page">Home</li>
+{%endblock breadcrumb%}

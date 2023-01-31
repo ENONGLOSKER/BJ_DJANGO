@@ -1,0 +1,13 @@
+{%extends 'base.html'%}
+{%block konten%}
+<div class="create my-4">
+    <h1 class="my-3">{{judul}}</h1>
+    <form method="POST">
+        {%csrf_token%}
+        <table>
+            {{datas.as_table}}
+        </table>
+        <button type="submit" class="btn btn-success bi bi-pencil-square my-2"> Simpan </button>
+    </form>
+</div>
+{%endblock konten%}

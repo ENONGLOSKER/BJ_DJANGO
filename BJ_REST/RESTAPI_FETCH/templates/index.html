@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DATA REST API</h1>
+   
+    {%for data in datas%}
+         <h4>JUMLAH DATA :{{data.id}}+{{data.data}}</h4>
+        <h5>{{data.id}}</h5>
+        <h6>{{data.title}}</h6>
+        <img src="{{data.url}}" style="width: 80x;">
+        <img src="{{data.thumbnailUrl}}" style="width: 90x; margin-top: 5px;">
+
+    {%endfor%}
+    
+</body>
+</html>

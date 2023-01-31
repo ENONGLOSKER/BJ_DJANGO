@@ -1,0 +1,50 @@
+{%extends "base.html"%}
+
+{%block title%}
+    {{judul}}
+{%endblock title%}
+
+{%block pagetitle%}
+    <h1>{{judul}}</h1>
+{%endblock pagetitle%}
+
+{%block breadcrumb%}
+<li class="breadcrumb-item "  aria-current="page">Home</li>
+<li class="breadcrumb-item active">Blog</li>
+
+{%endblock breadcrumb%}
+
+{%block content%}
+    <p><i>{{salam}}</i> </p>
+    Kategori :
+    {%for datacategori in categoris%}
+    <span class="badge bg-secondary" >
+        <a href="/blog/categori/{{datacategori.categori}}" style="text-decoration: none;  color: whitesmoke;">{{datacategori.categori}}</a>
+    </span>
+    {%endfor%}
+    <hr>
+
+   {%for data in datas%}
+    <div class="container " >
+        <div class="row m-2 d-flex gap-2">
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem; float: left;">
+                    <img
+                      src="static/img/kontent1.png"
+                      class="card-img-top"
+                      width="90px"/>
+                    <div class="card-body ">
+                        <span class="badge bg-secondary" >
+                            <a href="{%url 'blog:categori' categori_url=data.categori%}" style="text-decoration: none;  color: whitesmoke;">{{data.categori}}</a>
+                        </span>
+                        <h5 class="card-title">{{data.judul}}</h5>
+                       <p class="card-text" style="text-align: justify;">{{data.body | truncatechars:150}}</p>
+                       <h6>{{data.publish}}</h6>
+                      <a href="{%url 'blog:detail' slug_url=data.slug%} " class="btn btn-success">Belajar</a>
+                    </div>
+                </div>
+            </div>            
+        </div> 
+    </div> 
+   {%endfor%}
+{%endblock content%}

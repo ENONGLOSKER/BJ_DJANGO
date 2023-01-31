@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+
+{%block title%}
+    {{judul}}
+{%endblock title%}
+
+{%block pagetitle%}
+    <h1>{{judul}}</h1>
+{%endblock pagetitle%}
+
+{%block breadcrumb%}
+<li class="breadcrumb-item "  aria-current="page">Home</li>
+<li class="breadcrumb-item active">Blog</li>
+
+{%endblock breadcrumb%}
+
+{%block content%}
+    <p><i>{{salam}}</i></p>
+
+    <div class="container">
+        <form method="POST">
+            {%csrf_token%}
+
+            <table>
+                {{postingan.as_table}}
+            </table>
+            <button type="submit">Simpan</button>
+        </form>
+    </div>
+   
+{%endblock content%}

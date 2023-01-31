@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{%block judul%}
+    {{judul}}
+{%endblock judul%}
+
+{%block kontent%}
+    <h2>{{judul}}</h2> <br>
+    {%for data in datas%}
+    <h3>{{data.judul}}</h3>
+    <h6> <i> Kategoori: {{data.kategori}}</i></h6>
+    <p>{{data.isi}}</p>
+    {%endfor%}
+{%endblock kontent%}

@@ -1,0 +1,39 @@
+{%extends 'base.html'%}
+
+{%block konten%}
+<h1 class="my-4">{{judul}}</h1>
+<hr>
+<div class="create">
+  <a href=" {%url 'index:create'%} " class="btn btn-success bi bi-pencil-square mb-2"> Tamabah </a> 
+</div>
+<table class="table my-4">
+
+    <thead>
+      <tr class="text-center">
+        <th scope="col">NOMOR</th>
+        <th scope="col">NAMA</th>
+        <th scope="col">KETERANGAN</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">UPDATE</th>
+        <th scope="col">PUBLISH</th>
+        <th scope="col">ACTION</th>
+    </tr>
+    </thead>
+    <tbody>
+      {%for data in datas%}
+      <tr class="text-center">
+        <th scope="row" class="align-middle">{{forloop.counter}}</th>
+        <td class="align-middle">{{data.nama}}</td>
+        <td class="align-middle">{{data.ket | truncatechars:50}}</td>
+        <td class="align-middle">{{data.email}}</td>
+        <td class="align-middle">{{data.publish}}</td>
+        <td class="align-middle">{{data.update}}</td>
+        <td class="align-middle">
+            <a href="{%url 'index:update' up_id=data.id %} " class="btn btn-warning bi bi-pencil-square m-1"></a> 
+            <a href=" {%url 'index:delete' delete_id=data.id %} "class="btn btn-danger bi bi-trash m-1 "></a> 
+        </td>
+      </tr>
+     {%endfor%}
+    </tbody>
+  </table>
+{%endblock konten%}

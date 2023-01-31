@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {%include 'snippets/style.html'%}
+
+    <title>
+        {%block title%}
+        
+        {%endblock title%}
+    </title>
+  </head>
+  <body>
+    <div class="container" style="margin: 100px;">
+    {%include 'snippets/nav.html'%}
+
+    {%block judul%}
+    
+    {%endblock judul%}
+
+    {%block konten%}
+
+    {%endblock konten%}
+    
+    </div>
+   {%include 'snippets/script.html'%}
+</body>
+</html>

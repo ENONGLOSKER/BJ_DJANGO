@@ -1,0 +1,70 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    {% include "app1/style.html" %} <!-- digunakan untuk memecah bagian agar bisa di include -->
+    
+    <title>MY COURS | PYTHON</title>
+  </head>
+  <body>
+    {% include "app1/navbar.html" %}
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{%static 'app1/img/django.png' %}" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'app1/img/django.png' %}" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="{%static 'app1/img/django.png' %}" class="d-block w-100">
+        </div>
+      </div>     
+    </div>
+    <div class="container">
+        {%block title%}
+
+        {%endblock title%}
+        
+        <div class="container">
+          <div class="row justify-content-sm-center gap-4 ms-3">
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="{%static 'app1/img/django.png' %}" class="card-img-top" width="90px">
+                <div class="card-body">
+                  {% block content-1%}
+                  
+                  {% endblock content-1%}
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="{%static 'app1/img/django.png' %}" class="card-img-top" width="90px">
+                <div class="card-body">
+                  {% block content-2%}
+                  
+                  {% endblock content-2%}
+                </div>
+              </div>
+            </div>
+           
+                      
+          </div>
+        </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

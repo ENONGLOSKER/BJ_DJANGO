@@ -1,0 +1,50 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/app01/css/style.css' %}">
+    <link rel="stylesheet" href="{% static appCss %}"> <!--ini adalah css kastem yang di panggil dari variabel context  -->
+    <title>BELAJAR | DAJNGO </title>
+
+</head>
+<body>
+    <h2>{{ judul }}SILAHKAN PILIH MENU</h2>
+    <h2>admin : {{ admin }}</h2>
+    <div class="constainer">
+        <div class="card">
+           <h3>Belajar Flask</h3> 
+           <img src="{% static '/img/YTFLASK.png' %}" width="250">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Dolor dolore suscipit 
+                deleniti nam delectus quos!
+            </p>
+            <a href="/">Lihat</a>
+        </div>
+        <div class="card">
+           <h3>Belajar Flask</h3> 
+           <img src="{% static '/img/YTFLASK.png' %}" width="250">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Dolor dolore suscipit 
+                deleniti nam delectus quos!
+            </p>
+            <a href="/">Lihat</a>
+        </div>
+        <div class="card">
+           <h3>Belajar Flask</h3> 
+           <img src="{% static '/img/YTFLASK.png' %}" width="250">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. Dolor dolore suscipit 
+                deleniti nam delectus quos!
+            </p>
+            <a href="/">Lihat</a>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASS BASE VIEW</title>
+</head>
+<body>
+  <div class="container" style="margin: 60px;">
+    <h1>{{judul}}</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, blanditiis nulla odio ipsa sunt, deleniti sit laborum 
+        eum veniam aliquam esse labore, et ea! Culpa facilis, voluptatibus itaque velit, expedita dolore fugiat alias blanditiis 
+        optio nihil animi voluptate ab, sequi molestiae amet nesciunt magnam aspernatur sed aperiam enim deserunt voluptatum!.
+        <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, blanditiis nulla odio ipsa sunt, deleniti sit laborum 
+        eum veniam aliquam esse labore, et ea! Culpa facilis, voluptatibus itaque velit, expedita dolore fugiat alias blanditiis 
+        optio nihil animi voluptate ab, sequi molestiae amet nesciunt magnam aspernatur sed aperiam enim deserunt voluptatum!.
+    </p>
+    <form method="POST">
+      {%csrf_token%}
+      <button type="submit">KIRIM</button>
+    </form>
+  </div>
+</body>
+</html>
