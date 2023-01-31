@@ -115,6 +115,15 @@ app_name = 'blog'
 
 ## --------------------------------------------------
 
+#GITHUB
+-git init
+-git remote
+------------ (saat melkukan perubahan/ update mulai dari sini)
+-git add
+-git commit
+-git puhs
+
+
 - git remote
 git remote add origin link repo
 git remote add origin https://github.com/ENONGLOSKER/DJANGO.git
